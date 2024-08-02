@@ -34,7 +34,7 @@ class Account(Base):
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
     account_name = Column(String, index=True)
-    app_secret_token = Column(String, index=True)
+    app_secret_token = Column(String, unique=True, nullable=False) #modify
     website = Column(String, index=True, nullable=True)
     destinations = relationship("Destination", back_populates="account")
 

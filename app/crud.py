@@ -1,4 +1,5 @@
 
+import secrets
 from sqlalchemy.orm import Session
 from . import models, schemas
 
@@ -9,7 +10,8 @@ def get_account_by_email(db: Session, email: str):
     return db.query(models.Account).filter(models.Account.email == email).first()
 
 def create_account(db: Session, account: schemas.AccountCreate):
-    db_account = models.Account(email=account.email, account_name=account.account_name, website=account.website)
+    app_secret_token = secrets.token_hex(16)
+    db_account = models.Account(email=account.email, account_name=account.account_name, app_secret_token=app_secret_token,website=account.website)
     db.add(db_account)
     db.commit()
     db.refresh(db_account)
