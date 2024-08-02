@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "9b1ffd54-673c-4718-8e09-8489cd0956a1",
+		"name": "patdel-analytics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31760806"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/accounts/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"account_name\": \"Test Account\",\r\n  \"website\": \"http://example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/accounts/1/destinations/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"http://google.com/himanshu\",\r\n  \"http_method\": \"POST\",\r\n  \"headers\": {\r\n    \"APP_ID\": \"1234APPID1234\",\r\n    \"APP_SECRET\": \"enwdj3bshwer43bjhjs9ereuinkjcnsiurew8s\",\r\n    \"ACTION\": \"user.update\",\r\n    \"Content-Type\": \"application/json\",\r\n    \"Accept\": \"*\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/1/destinations/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"1",
+						"destinations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/server/incoming_data/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "CL-X-TOKEN",
+						"value": "eb989357bb8de4d71ee488173711a7c3",
+						"description": "eb989357bb8de4d71ee488173711a7c3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"account_name\": \"Test Account\",\r\n  \"website\": \"http://example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/server/incoming_data/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"server",
+						"incoming_data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/accounts/1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"account_name\": \"Test Account\",\r\n  \"website\": \"http://example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
